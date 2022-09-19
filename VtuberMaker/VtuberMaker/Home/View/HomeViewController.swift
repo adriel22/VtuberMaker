@@ -10,6 +10,18 @@ import UIKit
 class HomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
+    private let viewModel: HomeViewModel
+    
+    init(_ viewModel: HomeViewModel) {
+        self.viewModel = viewModel
+        
+        super.init(nibName: "HomeViewController", bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTable()
@@ -27,7 +39,7 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        2
+        viewModel.getSavedModels().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -43,6 +55,10 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         Constants.cellHeight
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.routeToModel(viewModel.getSavedModels()[indexPath.row])
     }
     
 }

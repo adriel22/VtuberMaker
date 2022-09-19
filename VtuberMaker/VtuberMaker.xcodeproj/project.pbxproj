@@ -19,6 +19,13 @@
 		FC18371828A1E6B500849E2A /* VtuberMakerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC18371728A1E6B500849E2A /* VtuberMakerUITestsLaunchTests.swift */; };
 		FC18372828A1E74400849E2A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC18372628A1E74400849E2A /* HomeViewController.swift */; };
 		FC18372928A1E74400849E2A /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC18372728A1E74400849E2A /* HomeViewController.xib */; };
+		FC1EEB4628AC7C0E000F7450 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1EEB4528AC7C0E000F7450 /* HomeViewModel.swift */; };
+		FC1EEB4828AC7C79000F7450 /* AvatarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1EEB4728AC7C79000F7450 /* AvatarModel.swift */; };
+		FC1EEB4E28AC7F68000F7450 /* AvatarSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1EEB4C28AC7F68000F7450 /* AvatarSceneViewController.swift */; };
+		FC1EEB4F28AC7F68000F7450 /* AvatarSceneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC1EEB4D28AC7F68000F7450 /* AvatarSceneViewController.xib */; };
+		FC1EEB5228AC807A000F7450 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1EEB5128AC807A000F7450 /* Coordinator.swift */; };
+		FC1EEB5428AC809F000F7450 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1EEB5328AC809F000F7450 /* MainCoordinator.swift */; };
+		FC1EEB5628AC8433000F7450 /* AvatarSceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1EEB5528AC8433000F7450 /* AvatarSceneCoordinator.swift */; };
 		FC38A16728AB0FB9004BBF5B /* AddAvatarTableFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC38A16628AB0FB9004BBF5B /* AddAvatarTableFooterView.swift */; };
 		FC38A16928AB0FC7004BBF5B /* AddAvatarTableFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC38A16828AB0FC7004BBF5B /* AddAvatarTableFooterView.xib */; };
 /* End PBXBuildFile section */
@@ -57,6 +64,13 @@
 		FC18371728A1E6B500849E2A /* VtuberMakerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VtuberMakerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FC18372628A1E74400849E2A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FC18372728A1E74400849E2A /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		FC1EEB4528AC7C0E000F7450 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		FC1EEB4728AC7C79000F7450 /* AvatarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarModel.swift; sourceTree = "<group>"; };
+		FC1EEB4C28AC7F68000F7450 /* AvatarSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarSceneViewController.swift; sourceTree = "<group>"; };
+		FC1EEB4D28AC7F68000F7450 /* AvatarSceneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvatarSceneViewController.xib; sourceTree = "<group>"; };
+		FC1EEB5128AC807A000F7450 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		FC1EEB5328AC809F000F7450 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		FC1EEB5528AC8433000F7450 /* AvatarSceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarSceneCoordinator.swift; sourceTree = "<group>"; };
 		FC38A16628AB0FB9004BBF5B /* AddAvatarTableFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAvatarTableFooterView.swift; sourceTree = "<group>"; };
 		FC38A16828AB0FC7004BBF5B /* AddAvatarTableFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddAvatarTableFooterView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,8 +142,11 @@
 		FC1836F328A1E6AF00849E2A /* VtuberMaker */ = {
 			isa = PBXGroup;
 			children = (
+				FC1EEB4928AC7DB5000F7450 /* AvatarAnimationModel */,
+				FC1EEB5028AC8028000F7450 /* Coordinator */,
 				FC18372A28A1E83E00849E2A /* Commons */,
 				FC18372428A1E6D900849E2A /* Home */,
+				FC1EEB4A28AC7F23000F7450 /* AvatarScene */,
 				FC1836FD28A1E6B500849E2A /* Assets.xcassets */,
 				FC1836FF28A1E6B500849E2A /* LaunchScreen.storyboard */,
 				FC18370228A1E6B500849E2A /* Info.plist */,
@@ -157,6 +174,7 @@
 		FC18372428A1E6D900849E2A /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				FC1EEB4428AC7BF8000F7450 /* ViewModel */,
 				FC18372528A1E6E000849E2A /* View */,
 			);
 			path = Home;
@@ -180,6 +198,49 @@
 				FC1836F628A1E6AF00849E2A /* SceneDelegate.swift */,
 			);
 			path = Commons;
+			sourceTree = "<group>";
+		};
+		FC1EEB4428AC7BF8000F7450 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FC1EEB4528AC7C0E000F7450 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FC1EEB4928AC7DB5000F7450 /* AvatarAnimationModel */ = {
+			isa = PBXGroup;
+			children = (
+				FC1EEB4728AC7C79000F7450 /* AvatarModel.swift */,
+			);
+			path = AvatarAnimationModel;
+			sourceTree = "<group>";
+		};
+		FC1EEB4A28AC7F23000F7450 /* AvatarScene */ = {
+			isa = PBXGroup;
+			children = (
+				FC1EEB4B28AC7F42000F7450 /* View */,
+			);
+			path = AvatarScene;
+			sourceTree = "<group>";
+		};
+		FC1EEB4B28AC7F42000F7450 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FC1EEB4C28AC7F68000F7450 /* AvatarSceneViewController.swift */,
+				FC1EEB4D28AC7F68000F7450 /* AvatarSceneViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FC1EEB5028AC8028000F7450 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				FC1EEB5128AC807A000F7450 /* Coordinator.swift */,
+				FC1EEB5328AC809F000F7450 /* MainCoordinator.swift */,
+				FC1EEB5528AC8433000F7450 /* AvatarSceneCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,6 +347,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC1EEB4F28AC7F68000F7450 /* AvatarSceneViewController.xib in Resources */,
 				FC18370128A1E6B500849E2A /* LaunchScreen.storyboard in Resources */,
 				FC1836FE28A1E6B500849E2A /* Assets.xcassets in Resources */,
 				FC15BECE28A3218700E96961 /* AvatarTableViewCell.xib in Resources */,
@@ -317,9 +379,15 @@
 			files = (
 				FC1836F528A1E6AF00849E2A /* AppDelegate.swift in Sources */,
 				FC15BED128A323FD00E96961 /* UITableView+Cells.swift in Sources */,
+				FC1EEB5228AC807A000F7450 /* Coordinator.swift in Sources */,
+				FC1EEB4628AC7C0E000F7450 /* HomeViewModel.swift in Sources */,
 				FC1836F728A1E6AF00849E2A /* SceneDelegate.swift in Sources */,
+				FC1EEB5428AC809F000F7450 /* MainCoordinator.swift in Sources */,
+				FC1EEB4828AC7C79000F7450 /* AvatarModel.swift in Sources */,
 				FC15BECD28A3218700E96961 /* AvatarTableViewCell.swift in Sources */,
+				FC1EEB5628AC8433000F7450 /* AvatarSceneCoordinator.swift in Sources */,
 				FC18372828A1E74400849E2A /* HomeViewController.swift in Sources */,
+				FC1EEB4E28AC7F68000F7450 /* AvatarSceneViewController.swift in Sources */,
 				FC38A16728AB0FB9004BBF5B /* AddAvatarTableFooterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
