@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.4.1">
+    <asset>
+        <contributor>
+            <author>Blender User</author>
+            <authoring_tool>Blender 2.80.75 commit date:2019-07-29, commit time:14:47, hash:f6cb5f54494e</authoring_tool>
+        </contributor>
+        <created>2022-06-01T13:11:36</created>
+        <modified>2022-06-01T13:11:36</modified>
+        <unit name="meter" meter="1"></unit>
+        <up_axis>Z_UP</up_axis>
+    </asset>
+    <library_effects>
+        <effect id="Material_001-effect">
+            <profile_COMMON>
+                <newparam sid="Right_eye_png-surface">
+                    <surface type="2D">
+                        <init_from>Right_eye_png</init_from>
+                    </surface>
+                </newparam>
+                <newparam sid="Right_eye_png-sampler">
+                    <sampler2D>
+                        <source>Right_eye_png-surface</source>
+                    </sampler2D>
+                </newparam>
+                <technique sid="common">
+                    <lambert>
+                        <emission>
+                            <color sid="emission">0 0 0 1</color>
+                        </emission>
+                        <diffuse>
+                            <texture texture="Right_eye_png-sampler" texcoord="UVMap"></texture>
+                        </diffuse>
+                        <index_of_refraction>
+                            <float sid="ior">1.45</float>
+                        </index_of_refraction>
+                    </lambert>
+                </technique>
+            </profile_COMMON>
+        </effect>
+    </library_effects>
+    <library_images>
+        <image id="Right_eye_png" name="Right_eye_png">
+            <init_from>Right%20eye.png</init_from>
+        </image>
+    </library_images>
+    <library_materials>
+        <material id="Material_001-material" name="Material.001">
+            <instance_effect url="#Material_001-effect"></instance_effect>
+        </material>
+    </library_materials>
+    <library_geometries>
+        <geometry id="Plane-mesh" name="Plane">
+            <mesh>
+                <source id="Plane-mesh-positions">
+                    <float_array id="Plane-mesh-positions-array" count="12">-1 -1 0 1 -1 0 -1 1 0 1 1 0</float_array>
+                    <technique_common>
+                        <accessor source="#Plane-mesh-positions-array" count="4" stride="3">
+                            <param name="X" type="float"></param>
+                            <param name="Y" type="float"></param>
+                            <param name="Z" type="float"></param>
+                        </accessor>
+                    </technique_common>
+                </source>
+                <source id="Plane-mesh-normals">
+                    <float_array id="Plane-mesh-normals-array" count="3">0 0 1</float_array>
+                    <technique_common>
+                        <accessor source="#Plane-mesh-normals-array" count="1" stride="3">
+                            <param name="X" type="float"></param>
+                            <param name="Y" type="float"></param>
+                            <param name="Z" type="float"></param>
+                        </accessor>
+                    </technique_common>
+                </source>
+                <source id="Plane-mesh-map-0">
+                    <float_array id="Plane-mesh-map-0-array" count="12">1 0 0 1 0 0 1 0 1 1 0 1</float_array>
+                    <technique_common>
+                        <accessor source="#Plane-mesh-map-0-array" count="6" stride="2">
+                            <param name="S" type="float"></param>
+                            <param name="T" type="float"></param>
+                        </accessor>
+                    </technique_common>
+                </source>
+                <vertices id="Plane-mesh-vertices">
+                    <input semantic="POSITION" source="#Plane-mesh-positions"></input>
+                </vertices>
+                <triangles material="Material_001-material" count="2">
+                    <input semantic="VERTEX" source="#Plane-mesh-vertices" offset="0"></input>
+                    <input semantic="NORMAL" source="#Plane-mesh-normals" offset="1"></input>
+                    <input semantic="TEXCOORD" source="#Plane-mesh-map-0" offset="2" set="0"></input>
+                    <p>1 0 0 2 0 1 0 0 2 1 0 3 3 0 4 2 0 5</p>
+                </triangles>
+            </mesh>
+        </geometry>
+        <geometry id="Plane-mesh_morph_eyeBlink_R" name="eyeBlink_R">
+            <mesh>
+                <source id="Plane-mesh_morph_eyeBlink_R-positions">
+                    <float_array id="Plane-mesh_morph_eyeBlink_R-positions-array" count="12">-0.2651309 -1 0 0.2651309 -1 0 -0.2651309 1 0 0.2651309 1 0</float_array>
+                    <technique_common>
+                        <accessor source="#Plane-mesh_morph_eyeBlink_R-positions-array" count="4" stride="3">
+                            <param name="X" type="float"></param>
+                            <param name="Y" type="float"></param>
+                            <param name="Z" type="float"></param>
+                        </accessor>
+                    </technique_common>
+                </source>
+                <source id="Plane-mesh_morph_eyeBlink_R-normals">
+                    <float_array id="Plane-mesh_morph_eyeBlink_R-normals-array" count="3">0 0 1</float_array>
+                    <technique_common>
+                        <accessor source="#Plane-mesh_morph_eyeBlink_R-normals-array" count="1" stride="3">
+                            <param name="X" type="float"></param>
+                            <param name="Y" type="float"></param>
+                            <param name="Z" type="float"></param>
+                        </accessor>
+                    </technique_common>
+                </source>
+                <source id="Plane-mesh_morph_eyeBlink_R-map-0">
+                    <float_array id="Plane-mesh_morph_eyeBlink_R-map-0-array" count="12">1 0 0 1 0 0 1 0 1 1 0 1</float_array>
+                    <technique_common>
+                        <accessor source="#Plane-mesh_morph_eyeBlink_R-map-0-array" count="6" stride="2">
+                            <param name="S" type="float"></param>
+                            <param name="T" type="float"></param>
+                        </accessor>
+                    </technique_common>
+                </source>
+                <vertices id="Plane-mesh_morph_eyeBlink_R-vertices">
+                    <input semantic="POSITION" source="#Plane-mesh_morph_eyeBlink_R-positions"></input>
+                </vertices>
+                <triangles material="Material_001-material" count="2">
+                    <input semantic="VERTEX" source="#Plane-mesh_morph_eyeBlink_R-vertices" offset="0"></input>
+                    <input semantic="NORMAL" source="#Plane-mesh_morph_eyeBlink_R-normals" offset="1"></input>
+                    <input semantic="TEXCOORD" source="#Plane-mesh_morph_eyeBlink_R-map-0" offset="2" set="0"></input>
+                    <p>1 0 0 2 0 1 0 0 2 1 0 3 3 0 4 2 0 5</p>
+                </triangles>
+            </mesh>
+        </geometry>
+    </library_geometries>
+    <library_controllers>
+        <controller id="Plane-morph" name="Plane-morph">
+            <morph source="#Plane-mesh" method="NORMALIZED">
+                <source id="Plane-targets">
+                    <IDREF_array id="Plane-targets-array" count="1">Plane-mesh_morph_eyeBlink_R</IDREF_array>
+                    <technique_common>
+                        <accessor source="#Plane-targets-array" count="1" stride="1">
+                            <param name="IDREF" type="IDREF"></param>
+                        </accessor>
+                    </technique_common>
+                </source>
+                <source id="Plane-weights">
+                    <float_array id="Plane-weights-array" count="1">0</float_array>
+                    <technique_common>
+                        <accessor source="#Plane-weights-array" count="1" stride="1">
+                            <param name="MORPH_WEIGHT" type="float"></param>
+                        </accessor>
+                    </technique_common>
+                </source>
+                <targets>
+                    <input semantic="MORPH_TARGET" source="#Plane-targets"></input>
+                    <input semantic="MORPH_WEIGHT" source="#Plane-weights"></input>
+                </targets>
+            </morph>
+        </controller>
+    </library_controllers>
+    <library_visual_scenes>
+        <visual_scene id="Scene" name="Scene">
+            <node id="Plane" name="Plane" type="NODE">
+                <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+                <instance_controller name="Plane-morph" url="#Plane-morph">
+                    <bind_material>
+                        <technique_common>
+                            <instance_material symbol="Material_001-material" target="#Material_001-material">
+                                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"></bind_vertex_input>
+                            </instance_material>
+                        </technique_common>
+                    </bind_material>
+                </instance_controller>
+            </node>
+        </visual_scene>
+    </library_visual_scenes>
+    <scene>
+        <instance_visual_scene url="#Scene"></instance_visual_scene>
+    </scene>
+</COLLADA>

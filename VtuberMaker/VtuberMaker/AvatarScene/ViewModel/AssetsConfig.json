@@ -1,0 +1,38 @@
+[
+    {
+        "type": "head",
+        "assets":[
+            {
+                "thumbnail": "head1Thumbnail",
+                "file": "head1/head1"
+            }
+        ]
+    },
+    {
+        "type": "rightEye",
+        "assets":[
+            {
+                "thumbnail": "Right eye (1)",
+                "file": "rightEye1/rightEye1M"
+            }
+        ]
+    },
+    {
+        "type": "leftEye",
+        "assets":[
+            {
+                "thumbnail": "Left eye (1)",
+                "file": "leftEye1/leftEye1M"
+            }
+        ]
+    },
+    {
+        "type": "mouth",
+        "assets":[
+            {
+                "thumbnail": "mouth1Thumbnail",
+                "file": "mouth1/mouth1M"
+            }
+        ]
+    }
+]

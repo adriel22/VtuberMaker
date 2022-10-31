@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AvatarSceneViewController" customModule="VtuberMaker" customModuleProvider="target">
             <connections>
+                <outlet property="assetsCollectionView" destination="ToZ-4P-J4E" id="vSA-UC-yd7"/>
+                <outlet property="faceView" destination="1SH-sT-zai" id="gZZ-7u-Zjx"/>
+                <outlet property="trackingView" destination="4f1-mT-ebH" id="IIt-Qz-CY0"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,8 +22,40 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1SH-sT-zai">
+                    <rect key="frame" x="0.0" y="48" width="414" height="514"/>
+                </sceneKitView>
+                <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4f1-mT-ebH">
+                    <rect key="frame" x="0.0" y="48" width="414" height="514"/>
+                </arscnView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ToZ-4P-J4E">
+                    <rect key="frame" x="0.0" y="562" width="414" height="334"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bEx-AU-DNN">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="AccentColor"/>
+            <constraints>
+                <constraint firstItem="1SH-sT-zai" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Bpy-Vd-xM3"/>
+                <constraint firstAttribute="bottom" secondItem="ToZ-4P-J4E" secondAttribute="bottom" id="KJo-Vd-JNa"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ToZ-4P-J4E" secondAttribute="trailing" id="Poh-i3-E3Q"/>
+                <constraint firstItem="4f1-mT-ebH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Qlh-1Q-VOt"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1SH-sT-zai" secondAttribute="trailing" id="RYH-Bz-S6S"/>
+                <constraint firstItem="1SH-sT-zai" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Ylh-jw-zpJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="4f1-mT-ebH" secondAttribute="bottom" constant="300" id="gUi-F9-cfb"/>
+                <constraint firstItem="ToZ-4P-J4E" firstAttribute="top" secondItem="1SH-sT-zai" secondAttribute="bottom" id="kkL-1C-T6u"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4f1-mT-ebH" secondAttribute="trailing" id="rIR-JG-ayf"/>
+                <constraint firstItem="4f1-mT-ebH" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="sal-iZ-SdP"/>
+                <constraint firstItem="ToZ-4P-J4E" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="wDp-Gh-3cR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="1SH-sT-zai" secondAttribute="bottom" constant="300" id="wDq-0o-ow1"/>
+            </constraints>
             <point key="canvasLocation" x="139" y="77"/>
         </view>
     </objects>
@@ -26,5 +63,8 @@
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

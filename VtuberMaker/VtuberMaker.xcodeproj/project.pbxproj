@@ -28,6 +28,16 @@
 		FC1EEB5628AC8433000F7450 /* AvatarSceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1EEB5528AC8433000F7450 /* AvatarSceneCoordinator.swift */; };
 		FC38A16728AB0FB9004BBF5B /* AddAvatarTableFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC38A16628AB0FB9004BBF5B /* AddAvatarTableFooterView.swift */; };
 		FC38A16928AB0FC7004BBF5B /* AddAvatarTableFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC38A16828AB0FC7004BBF5B /* AddAvatarTableFooterView.xib */; };
+		FC53CA6828D8F19200A8F974 /* AvatarSceneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53CA6728D8F19200A8F974 /* AvatarSceneViewModel.swift */; };
+		FCA0566428DBE0A300556896 /* Teste.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = FCA0566328DBE0A300556896 /* Teste.scnassets */; };
+		FCA808C929008BA200C9E432 /* Thumbnails.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCA808C829008BA200C9E432 /* Thumbnails.xcassets */; };
+		FCE1FC2728F8CB9D00C2A893 /* AssetTypeSelectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE1FC2528F8CB9D00C2A893 /* AssetTypeSelectionHeader.swift */; };
+		FCE1FC2828F8CB9D00C2A893 /* AssetTypeSelectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCE1FC2628F8CB9D00C2A893 /* AssetTypeSelectionHeader.xib */; };
+		FCE1FC2B28F8CBDD00C2A893 /* AssetSelectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE1FC2928F8CBDD00C2A893 /* AssetSelectionCollectionViewCell.swift */; };
+		FCE1FC2C28F8CBDD00C2A893 /* AssetSelectionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCE1FC2A28F8CBDD00C2A893 /* AssetSelectionCollectionViewCell.xib */; };
+		FCE1FC2E28F8CCF700C2A893 /* UICollectionView+Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE1FC2D28F8CCF700C2A893 /* UICollectionView+Cells.swift */; };
+		FCE1FC3028FCEF5D00C2A893 /* JsonReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE1FC2F28FCEF5D00C2A893 /* JsonReader.swift */; };
+		FCE1FC3228FCF0E400C2A893 /* AssetsConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = FCE1FC3128FCF0E400C2A893 /* AssetsConfig.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +83,16 @@
 		FC1EEB5528AC8433000F7450 /* AvatarSceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarSceneCoordinator.swift; sourceTree = "<group>"; };
 		FC38A16628AB0FB9004BBF5B /* AddAvatarTableFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAvatarTableFooterView.swift; sourceTree = "<group>"; };
 		FC38A16828AB0FC7004BBF5B /* AddAvatarTableFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddAvatarTableFooterView.xib; sourceTree = "<group>"; };
+		FC53CA6728D8F19200A8F974 /* AvatarSceneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarSceneViewModel.swift; sourceTree = "<group>"; };
+		FCA0566328DBE0A300556896 /* Teste.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Teste.scnassets; sourceTree = "<group>"; };
+		FCA808C829008BA200C9E432 /* Thumbnails.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Thumbnails.xcassets; sourceTree = "<group>"; };
+		FCE1FC2528F8CB9D00C2A893 /* AssetTypeSelectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetTypeSelectionHeader.swift; sourceTree = "<group>"; };
+		FCE1FC2628F8CB9D00C2A893 /* AssetTypeSelectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AssetTypeSelectionHeader.xib; sourceTree = "<group>"; };
+		FCE1FC2928F8CBDD00C2A893 /* AssetSelectionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetSelectionCollectionViewCell.swift; sourceTree = "<group>"; };
+		FCE1FC2A28F8CBDD00C2A893 /* AssetSelectionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AssetSelectionCollectionViewCell.xib; sourceTree = "<group>"; };
+		FCE1FC2D28F8CCF700C2A893 /* UICollectionView+Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Cells.swift"; sourceTree = "<group>"; };
+		FCE1FC2F28FCEF5D00C2A893 /* JsonReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonReader.swift; sourceTree = "<group>"; };
+		FCE1FC3128FCF0E400C2A893 /* AssetsConfig.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AssetsConfig.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				FC15BED028A323FD00E96961 /* UITableView+Cells.swift */,
+				FCE1FC2D28F8CCF700C2A893 /* UICollectionView+Cells.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -142,6 +163,7 @@
 		FC1836F328A1E6AF00849E2A /* VtuberMaker */ = {
 			isa = PBXGroup;
 			children = (
+				FCA0566328DBE0A300556896 /* Teste.scnassets */,
 				FC1EEB4928AC7DB5000F7450 /* AvatarAnimationModel */,
 				FC1EEB5028AC8028000F7450 /* Coordinator */,
 				FC18372A28A1E83E00849E2A /* Commons */,
@@ -196,6 +218,7 @@
 				FC15BECF28A323D700E96961 /* Extensions */,
 				FC1836F428A1E6AF00849E2A /* AppDelegate.swift */,
 				FC1836F628A1E6AF00849E2A /* SceneDelegate.swift */,
+				FCA808C829008BA200C9E432 /* Thumbnails.xcassets */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -219,6 +242,7 @@
 		FC1EEB4A28AC7F23000F7450 /* AvatarScene */ = {
 			isa = PBXGroup;
 			children = (
+				FC53CA6628D8F17800A8F974 /* ViewModel */,
 				FC1EEB4B28AC7F42000F7450 /* View */,
 			);
 			path = AvatarScene;
@@ -227,6 +251,7 @@
 		FC1EEB4B28AC7F42000F7450 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FCE1FC2428F8CB2600C2A893 /* Cells */,
 				FC1EEB4C28AC7F68000F7450 /* AvatarSceneViewController.swift */,
 				FC1EEB4D28AC7F68000F7450 /* AvatarSceneViewController.xib */,
 			);
@@ -241,6 +266,27 @@
 				FC1EEB5528AC8433000F7450 /* AvatarSceneCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		FC53CA6628D8F17800A8F974 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FC53CA6728D8F19200A8F974 /* AvatarSceneViewModel.swift */,
+				FCE1FC2F28FCEF5D00C2A893 /* JsonReader.swift */,
+				FCE1FC3128FCF0E400C2A893 /* AssetsConfig.json */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FCE1FC2428F8CB2600C2A893 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FCE1FC2528F8CB9D00C2A893 /* AssetTypeSelectionHeader.swift */,
+				FCE1FC2628F8CB9D00C2A893 /* AssetTypeSelectionHeader.xib */,
+				FCE1FC2928F8CBDD00C2A893 /* AssetSelectionCollectionViewCell.swift */,
+				FCE1FC2A28F8CBDD00C2A893 /* AssetSelectionCollectionViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,10 +394,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC1EEB4F28AC7F68000F7450 /* AvatarSceneViewController.xib in Resources */,
+				FCE1FC2C28F8CBDD00C2A893 /* AssetSelectionCollectionViewCell.xib in Resources */,
+				FCE1FC3228FCF0E400C2A893 /* AssetsConfig.json in Resources */,
+				FCA0566428DBE0A300556896 /* Teste.scnassets in Resources */,
 				FC18370128A1E6B500849E2A /* LaunchScreen.storyboard in Resources */,
+				FCA808C929008BA200C9E432 /* Thumbnails.xcassets in Resources */,
 				FC1836FE28A1E6B500849E2A /* Assets.xcassets in Resources */,
 				FC15BECE28A3218700E96961 /* AvatarTableViewCell.xib in Resources */,
 				FC18372928A1E74400849E2A /* HomeViewController.xib in Resources */,
+				FCE1FC2828F8CB9D00C2A893 /* AssetTypeSelectionHeader.xib in Resources */,
 				FC38A16928AB0FC7004BBF5B /* AddAvatarTableFooterView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,9 +436,14 @@
 				FC1EEB5428AC809F000F7450 /* MainCoordinator.swift in Sources */,
 				FC1EEB4828AC7C79000F7450 /* AvatarModel.swift in Sources */,
 				FC15BECD28A3218700E96961 /* AvatarTableViewCell.swift in Sources */,
+				FCE1FC2728F8CB9D00C2A893 /* AssetTypeSelectionHeader.swift in Sources */,
+				FCE1FC3028FCEF5D00C2A893 /* JsonReader.swift in Sources */,
 				FC1EEB5628AC8433000F7450 /* AvatarSceneCoordinator.swift in Sources */,
+				FCE1FC2E28F8CCF700C2A893 /* UICollectionView+Cells.swift in Sources */,
 				FC18372828A1E74400849E2A /* HomeViewController.swift in Sources */,
+				FC53CA6828D8F19200A8F974 /* AvatarSceneViewModel.swift in Sources */,
 				FC1EEB4E28AC7F68000F7450 /* AvatarSceneViewController.swift in Sources */,
+				FCE1FC2B28F8CBDD00C2A893 /* AssetSelectionCollectionViewCell.swift in Sources */,
 				FC38A16728AB0FB9004BBF5B /* AddAvatarTableFooterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

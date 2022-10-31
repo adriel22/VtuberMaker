@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+ <asset>
+  <contributor>
+   <authoring_tool>SceneKit Collada Exporter v1.0</authoring_tool>
+  </contributor>
+  <created>2022-06-01T02:06:05Z</created>
+  <modified>2022-06-01T02:06:05Z</modified>
+  <unit meter="1.000000"/>
+  <up_axis>Y_UP</up_axis>
+ </asset>
+ <library_images>
+  <image id="Right_eye_png" name="Right_eye_png">
+   <init_from>Right eye.png</init_from>
+  </image>
+ </library_images>
+ <library_materials>
+  <material id="Material_001-material" name="Material_001">
+   <instance_effect url="#effect_Material_001-material"/>
+  </material>
+ </library_materials>
+ <library_effects>
+  <effect id="effect_Material_001-material">
+   <profile_COMMON>
+    <newparam sid="ID1_Right_eye_png_surface">
+     <surface type="2D">
+      <init_from>Right_eye_png</init_from>
+     </surface>
+    </newparam>
+    <newparam sid="ID1_Right_eye_png">
+     <sampler2D>
+      <source>ID1_Right_eye_png_surface</source>
+      <wrap_s>WRAP</wrap_s>
+      <wrap_t>WRAP</wrap_t>
+      <minfilter>LINEAR</minfilter>
+      <magfilter>LINEAR</magfilter>
+      <mipfilter>LINEAR</mipfilter>
+     </sampler2D>
+    </newparam>
+    <technique sid="common">
+     <lambert>
+      <diffuse>
+       <texture texture="ID1_Right_eye_png" texcoord="CHANNEL2"/>
+      </diffuse>
+      <transparency>
+       <float>1</float>
+      </transparency>
+      <index_of_refraction>
+       <float>1</float>
+      </index_of_refraction>
+     </lambert>
+    </technique>
+   </profile_COMMON>
+   <extra>
+    <technique profile="SceneKit">
+     <litPerPixel>1</litPerPixel>
+     <ambient_diffuse_lock>0</ambient_diffuse_lock>
+    </technique>
+   </extra>
+  </effect>
+ </library_effects>
+ <library_geometries>
+  <geometry id="geometry2">
+   <mesh>
+    <source id="Plane-mesh-positions">
+     <float_array id="ID3-array" count="18">1 0 1 -1 0 -1 -1 0 1 1 0 1 1 0 -1 -1 0 -1 </float_array>
+     <technique_common>
+      <accessor source="#ID3-array" count="6" stride="3">
+       <param name="X" type="float"/>
+       <param name="Y" type="float"/>
+       <param name="Z" type="float"/>
+      </accessor>
+     </technique_common>
+    </source>
+    <source id="geometrySource4">
+     <float_array id="ID5-array" count="18">0 0 1.00024 0 0 1.00024 0 0 1.00024 0 0 1.00024 0 0 1 0 0 1 </float_array>
+     <technique_common>
+      <accessor source="#ID5-array" count="6" stride="3">
+       <param name="X" type="float"/>
+       <param name="Y" type="float"/>
+       <param name="Z" type="float"/>
+      </accessor>
+     </technique_common>
+    </source>
+    <source id="Plane-mesh-map-0">
+     <float_array id="ID6-array" count="12">1 0 0 1 0 0 1 0 1 1 0 1 </float_array>
+     <technique_common>
+      <accessor source="#ID6-array" count="6" stride="2">
+       <param name="S" type="float"/>
+       <param name="T" type="float"/>
+      </accessor>
+     </technique_common>
+    </source>
+    <vertices id="Plane-mesh-positions-vertices">
+     <input semantic="POSITION" source="#Plane-mesh-positions"/>
+    </vertices>
+    <triangles count="2" material="geometryElement7">
+     <input semantic="VERTEX" offset="0" source="#Plane-mesh-positions-vertices"/>
+     <input semantic="NORMAL" offset="0" source="#geometrySource4"/>
+     <input semantic="TEXCOORD" offset="0" source="#Plane-mesh-map-0" set="1"/>
+     <p>0 1 2 3 4 5 </p>
+    </triangles>
+   </mesh>
+  </geometry>
+  <geometry id="geometry8">
+   <extra>
+    <technique profile="SceneKit">
+     <double_sided>1</double_sided>
+    </technique>
+   </extra>
+   <mesh>
+    <source id="Plane-mesh_morph_Teste-positions">
+     <float_array id="ID9-array" count="18">0.265131 0 1 -0.265131 0 -1 -0.265131 0 1 0.265131 0 1 0.265131 0 -1 -0.265131 0 -1 </float_array>
+     <technique_common>
+      <accessor source="#ID9-array" count="6" stride="3">
+       <param name="X" type="float"/>
+       <param name="Y" type="float"/>
+       <param name="Z" type="float"/>
+      </accessor>
+     </technique_common>
+    </source>
+    <source id="geometrySource10">
+     <float_array id="ID11-array" count="18">0 0 0.999756 0 0 0.999756 0 0 0.999756 0 0 0.999756 0 0 1 0 0 1 </float_array>
+     <technique_common>
+      <accessor source="#ID11-array" count="6" stride="3">
+       <param name="X" type="float"/>
+       <param name="Y" type="float"/>
+       <param name="Z" type="float"/>
+      </accessor>
+     </technique_common>
+    </source>
+    <vertices id="Plane-mesh_morph_Teste-positions-vertices">
+     <input semantic="POSITION" source="#Plane-mesh_morph_Teste-positions"/>
+    </vertices>
+    <triangles count="0">
+     <input semantic="VERTEX" offset="0" source="#Plane-mesh_morph_Teste-positions-vertices"/>
+     <input semantic="NORMAL" offset="0" source="#geometrySource10"/>
+    </triangles>
+   </mesh>
+  </geometry>
+ </library_geometries>
+ <library_controllers>
+  <controller id="morph12">
+   <morph source="#geometry2" method="NORMALIZED">
+    <source id="morph12-targets">
+     <IDREF_array id="morph12-targets-array" count="1">geometry8 </IDREF_array>
+     <technique_common>
+      <accessor source="#morph12-targets-array" count="1" stride="1">
+       <param name="MORPH_TARGET" type="IDREF"/>
+      </accessor>
+     </technique_common>
+    </source>
+    <source id="Plane-weights">
+     <float_array id="ID13-array" count="1">0 </float_array>
+     <technique_common>
+      <accessor source="#ID13-array" count="1" stride="1">
+       <param name="A" type="float"/>
+      </accessor>
+     </technique_common>
+    </source>
+    <targets>
+     <input semantic="MORPH_TARGET" source="#morph12-targets"/>
+     <input semantic="MORPH_WEIGHT" source="#Plane-weights"/>
+    </targets>
+   </morph>
+  </controller>
+ </library_controllers>
+ <library_visual_scenes>
+  <visual_scene id="scene14">
+   <node id="Plane" name="Plane">
+    <instance_controller url="#morph12">
+     <bind_material>
+      <technique_common>
+       <instance_material symbol="geometryElement7" target="#Material_001-material">
+        <bind_vertex_input semantic="CHANNEL2" input_semantic="TEXCOORD" input_set="1"/>
+       </instance_material>
+      </technique_common>
+     </bind_material>
+    </instance_controller>
+   </node>
+  </visual_scene>
+ </library_visual_scenes>
+ <scene>
+  <instance_visual_scene url="#scene14"/>
+ </scene>
+</COLLADA>

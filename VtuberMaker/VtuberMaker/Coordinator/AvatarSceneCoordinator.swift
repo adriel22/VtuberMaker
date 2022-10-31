@@ -17,7 +17,8 @@ final class AvatarSceneCoordinator: Coordinator {
     }
     
     func start() {
-        let controller = AvatarSceneViewController(withModel: model)
+        let viewModel = AvatarSceneViewModel(avatarModel: model)
+        let controller = AvatarSceneViewController(viewModel)
         navigationController.pushViewController(controller, animated: true)
     }
     
