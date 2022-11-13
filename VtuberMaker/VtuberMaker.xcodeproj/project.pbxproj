@@ -20,7 +20,7 @@
 		FC18372828A1E74400849E2A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC18372628A1E74400849E2A /* HomeViewController.swift */; };
 		FC18372928A1E74400849E2A /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC18372728A1E74400849E2A /* HomeViewController.xib */; };
 		FC1EEB4628AC7C0E000F7450 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1EEB4528AC7C0E000F7450 /* HomeViewModel.swift */; };
-		FC1EEB4828AC7C79000F7450 /* AvatarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1EEB4728AC7C79000F7450 /* AvatarModel.swift */; };
+		FC1EEB4828AC7C79000F7450 /* AssetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1EEB4728AC7C79000F7450 /* AssetData.swift */; };
 		FC1EEB4E28AC7F68000F7450 /* AvatarSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1EEB4C28AC7F68000F7450 /* AvatarSceneViewController.swift */; };
 		FC1EEB4F28AC7F68000F7450 /* AvatarSceneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC1EEB4D28AC7F68000F7450 /* AvatarSceneViewController.xib */; };
 		FC1EEB5228AC807A000F7450 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1EEB5128AC807A000F7450 /* Coordinator.swift */; };
@@ -38,6 +38,7 @@
 		FCE1FC2E28F8CCF700C2A893 /* UICollectionView+Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE1FC2D28F8CCF700C2A893 /* UICollectionView+Cells.swift */; };
 		FCE1FC3028FCEF5D00C2A893 /* JsonReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE1FC2F28FCEF5D00C2A893 /* JsonReader.swift */; };
 		FCE1FC3228FCF0E400C2A893 /* AssetsConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = FCE1FC3128FCF0E400C2A893 /* AssetsConfig.json */; };
+		FCEA9179291C18FA0079463F /* AvatarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEA9178291C18FA0079463F /* AvatarModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,7 +76,7 @@
 		FC18372628A1E74400849E2A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FC18372728A1E74400849E2A /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		FC1EEB4528AC7C0E000F7450 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		FC1EEB4728AC7C79000F7450 /* AvatarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarModel.swift; sourceTree = "<group>"; };
+		FC1EEB4728AC7C79000F7450 /* AssetData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetData.swift; sourceTree = "<group>"; };
 		FC1EEB4C28AC7F68000F7450 /* AvatarSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarSceneViewController.swift; sourceTree = "<group>"; };
 		FC1EEB4D28AC7F68000F7450 /* AvatarSceneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvatarSceneViewController.xib; sourceTree = "<group>"; };
 		FC1EEB5128AC807A000F7450 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -93,6 +94,7 @@
 		FCE1FC2D28F8CCF700C2A893 /* UICollectionView+Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Cells.swift"; sourceTree = "<group>"; };
 		FCE1FC2F28FCEF5D00C2A893 /* JsonReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonReader.swift; sourceTree = "<group>"; };
 		FCE1FC3128FCF0E400C2A893 /* AssetsConfig.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AssetsConfig.json; sourceTree = "<group>"; };
+		FCEA9178291C18FA0079463F /* AvatarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,7 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				FCA0566328DBE0A300556896 /* Teste.scnassets */,
-				FC1EEB4928AC7DB5000F7450 /* AvatarAnimationModel */,
+				FC1EEB4928AC7DB5000F7450 /* AssetModel */,
 				FC1EEB5028AC8028000F7450 /* Coordinator */,
 				FC18372A28A1E83E00849E2A /* Commons */,
 				FC18372428A1E6D900849E2A /* Home */,
@@ -218,6 +220,8 @@
 				FC15BECF28A323D700E96961 /* Extensions */,
 				FC1836F428A1E6AF00849E2A /* AppDelegate.swift */,
 				FC1836F628A1E6AF00849E2A /* SceneDelegate.swift */,
+				FCE1FC2F28FCEF5D00C2A893 /* JsonReader.swift */,
+				FCE1FC3128FCF0E400C2A893 /* AssetsConfig.json */,
 				FCA808C829008BA200C9E432 /* Thumbnails.xcassets */,
 			);
 			path = Commons;
@@ -231,12 +235,13 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		FC1EEB4928AC7DB5000F7450 /* AvatarAnimationModel */ = {
+		FC1EEB4928AC7DB5000F7450 /* AssetModel */ = {
 			isa = PBXGroup;
 			children = (
-				FC1EEB4728AC7C79000F7450 /* AvatarModel.swift */,
+				FC1EEB4728AC7C79000F7450 /* AssetData.swift */,
+				FCEA9178291C18FA0079463F /* AvatarModel.swift */,
 			);
-			path = AvatarAnimationModel;
+			path = AssetModel;
 			sourceTree = "<group>";
 		};
 		FC1EEB4A28AC7F23000F7450 /* AvatarScene */ = {
@@ -272,8 +277,6 @@
 			isa = PBXGroup;
 			children = (
 				FC53CA6728D8F19200A8F974 /* AvatarSceneViewModel.swift */,
-				FCE1FC2F28FCEF5D00C2A893 /* JsonReader.swift */,
-				FCE1FC3128FCF0E400C2A893 /* AssetsConfig.json */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -430,11 +433,12 @@
 			files = (
 				FC1836F528A1E6AF00849E2A /* AppDelegate.swift in Sources */,
 				FC15BED128A323FD00E96961 /* UITableView+Cells.swift in Sources */,
+				FCEA9179291C18FA0079463F /* AvatarModel.swift in Sources */,
 				FC1EEB5228AC807A000F7450 /* Coordinator.swift in Sources */,
 				FC1EEB4628AC7C0E000F7450 /* HomeViewModel.swift in Sources */,
 				FC1836F728A1E6AF00849E2A /* SceneDelegate.swift in Sources */,
 				FC1EEB5428AC809F000F7450 /* MainCoordinator.swift in Sources */,
-				FC1EEB4828AC7C79000F7450 /* AvatarModel.swift in Sources */,
+				FC1EEB4828AC7C79000F7450 /* AssetData.swift in Sources */,
 				FC15BECD28A3218700E96961 /* AvatarTableViewCell.swift in Sources */,
 				FCE1FC2728F8CB9D00C2A893 /* AssetTypeSelectionHeader.swift in Sources */,
 				FCE1FC3028FCEF5D00C2A893 /* JsonReader.swift in Sources */,

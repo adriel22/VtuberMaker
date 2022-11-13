@@ -15,8 +15,8 @@ class AvatarSceneViewController: UIViewController {
     @IBOutlet weak var faceView: SCNView!
     @IBOutlet weak var trackingView: ARSCNView!
     
-    var contentNode: SCNReferenceNode? // Reference to the .scn file
-    var cameraPosition = SCNVector3Make(0, 0, 10) // Camera node to set position that the SceneKit is looking at the character
+    var contentNode: SCNReferenceNode?
+    var cameraPosition = SCNVector3Make(0, 0, 10)
     let scene = SCNScene()
     let cameraNode = SCNNode()
     
@@ -24,7 +24,6 @@ class AvatarSceneViewController: UIViewController {
     private var panStartZ: CGFloat = 0
     
     private let viewModel: AvatarSceneViewModel
-    private lazy var contentChildNodes = contentNode?.childNodes
     private var sceneNodes: [SCNNode] = []
     
     let panRecognizer = UIPanGestureRecognizer()
@@ -76,7 +75,6 @@ extension AvatarSceneViewController {
     
     private func startTracking() {
         self.setupFaceTracker()
-        //        self.sceneSetup()
         self.createCameraNode()
     }
     
@@ -108,14 +106,12 @@ extension AvatarSceneViewController {
 
 extension AvatarSceneViewController {
     func setupFaceTracker() {
-        // Configure and start face tracking session
         let configuration = ARFaceTrackingConfiguration()
         configuration.isLightEstimationEnabled = true
         
-        // Run ARSession and set delegate to self
         self.trackingView.session.run(configuration)
         self.trackingView.delegate = self
-        self.trackingView.isHidden = true // Remove if you want to see the camera feed
+        self.trackingView.isHidden = true
     }
     
     func sceneSetup(withResource resource: String) {
@@ -138,13 +134,8 @@ extension AvatarSceneViewController {
         }
         self.faceView.autoenablesDefaultLighting = true
         
-        // set the scene to the view
         self.faceView.scene = self.scene
-        
-        // allows the user to manipulate the camera
         self.faceView.allowsCameraControl = false
-        
-        // configure the view
         self.faceView.backgroundColor = .clear
     }
     
@@ -163,19 +154,13 @@ extension AvatarSceneViewController: ARSCNViewDelegate {
         
         DispatchQueue.main.async {
             let blendShapes = faceAnchor.blendShapes
-            // This will only work correctly if the shape keys are given the exact same name as the blendshape names
             for (key, value) in blendShapes {
                 if let fValue = value as? Float {
-                    //                    self.head.morpher?.setWeight(CGFloat(fValue), forTargetNamed: key.rawValue)
                     self.sceneNodes.forEach { plane in
                         plane.morpher?.setWeight(CGFloat(fValue), forTargetNamed: key.rawValue)
                     }
-                    //                    self.contentChildNodes?.forEach({ plane in
-                    //                        plane.morpher?.setWeight(CGFloat(fValue), forTargetNamed: key.rawValue)
-                    //                    })
                 }
             }
-            //            self.model.eulerAngles = self.calculateEulerAngles(faceAnchor)
         }
     }
     

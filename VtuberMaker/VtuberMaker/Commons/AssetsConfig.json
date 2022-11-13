@@ -12,7 +12,7 @@
         "type": "rightEye",
         "assets":[
             {
-                "thumbnail": "Right eye (1)",
+                "thumbnail": "rightEye1Thumbnail",
                 "file": "rightEye1/rightEye1M"
             }
         ]
@@ -21,11 +21,21 @@
         "type": "leftEye",
         "assets":[
             {
-                "thumbnail": "Left eye (1)",
+                "thumbnail": "leftEye1Thumbnail",
                 "file": "leftEye1/leftEye1M"
             }
         ]
     },
+    {
+        "type": "nose",
+        "assets":[
+            {
+                "thumbnail": "nose1Thumbnail",
+                "file": "nose1/nose1M"
+            }
+        ]
+    },
+
     {
         "type": "mouth",
         "assets":[

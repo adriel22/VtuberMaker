@@ -2,7 +2,7 @@
 //  AvatarModel.swift
 //  VtuberMaker
 //
-//  Created by Adriel Freire on 16/08/22.
+//  Created by Adriel Freire on 09/11/22.
 //
 
 import Foundation

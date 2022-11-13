@@ -11,7 +11,6 @@ struct JsonReader {
         if let path = Bundle.main.path(forResource: jsonName, ofType: "json") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-//                let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
                 let decoder = JSONDecoder()
                 let jsonResult = try decoder.decode(type, from: data)
                 return jsonResult

@@ -15,10 +15,6 @@ final class AvatarSceneViewModel {
         assetsData = jsonReader.getJson(named: "AssetsConfig", withType: [AssetData].self) ?? []
     }
     
-    func getAssets(ofType type: AssetType) -> [Asset] {
-        return assetsData[0].assets
-    }
-    
     func getAssets(ofSection section: Int) -> [Asset] {
         return assetsData[section].assets
     }
@@ -34,23 +30,4 @@ final class AvatarSceneViewModel {
     func getType(ofSection section: Int) -> String {
         return assetsData[section].type.rawValue
     }
-}
-
-enum AssetType: String, Codable {
-    case rightEye
-    case leftEye
-    case head
-    case hair
-    case mouth
-    
-}
-
-struct Asset: Codable {
-    let thumbnail: String
-    let file: String
-}
-
-struct AssetData: Codable {
-    let type: AssetType
-    let assets: [Asset]
 }
